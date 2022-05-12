@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 245815890904377815}
   - component: {fileID: 245815890904377814}
   - component: {fileID: 245815890904377813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidSFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245815892078858971}
   - component: {fileID: 245815892078858970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmallFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}

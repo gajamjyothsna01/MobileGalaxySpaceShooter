@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 44058610053721564}
   - component: {fileID: 44058610053721565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LargeSeven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 44058611228169936}
   - component: {fileID: 44058611228169937}
   - component: {fileID: 44058611228169938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidLSeven
   m_TagString: Untagged
   m_Icon: {fileID: 0}

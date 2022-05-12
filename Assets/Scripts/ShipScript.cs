@@ -9,11 +9,12 @@ public class ShipScript : MonoBehaviour
     #region PUBLIC VARIABLES
     public float rotationSpeed = 10f; // Rotation speed to rotate a ship in degrees for secoond
     public float movementSpeed = 1f; //The movement of ship by Force applied in units for second.
+    public Transform launcher;
     #endregion
 
     #region PRIVATE VARIABLES
     private bool isRotating = false;
-    private const string TURN_COROUTINE_FUNCTION = "TurnRotateAndMoveTowardsTap";
+    private const string TURN_COROUTINE_FUNCTION = "TurnRoateOnTap";
     #endregion
 
     #region MONOBEHAVIOUR METHODS
@@ -45,11 +46,20 @@ public class ShipScript : MonoBehaviour
         StopCoroutine(TURN_COROUTINE_FUNCTION);
         StartCoroutine(TURN_COROUTINE_FUNCTION,touchWorldPosition); 
     }
+    // Shoot a bullet forward.
+    private void Shoot()
+    {
+        BulletScript bullet = PoolManager.Instance.Spawn(Constants.BULLET_PREFAB_NAME).GetComponent<BulletScript>();
+        bullet.SetPosition(launcher.position);
+        bullet.SetTrajectory(bullet.transform.position + transform.forward);
+    }
+    /*
     IEnumerator TurnRotateAndMoveTowardsTap(Vector3 tempPoint)
     {
+        
         isRotating = true;
-        tempPoint = tempPoint-this.transform.position; // To find the differences between touch position and current ship position
-        tempPoint.z = transform.position.z; // assgining z value ship position to my touch position
+        //tempPoint = tempPoint-this.transform.position; // To find the differences between touch position and current ship position
+       // tempPoint.z = transform.position.z; // assgining z value ship position to my touch position
         transform.position = tempPoint;
         Quaternion startrotation = this.transform.rotation; //start rotation, the rotataion start point.
         Quaternion endrotation = Quaternion.LookRotation(tempPoint, Vector3.up); //This rotation will look at touch point in a upward direction
@@ -64,6 +74,29 @@ public class ShipScript : MonoBehaviour
         transform.rotation = endrotation; //At this point, we need to put a shooting functionality here!
         isRotating=false;
         yield return (null);
+        
+    }*/
+
+    IEnumerator TurnRoateOnTap(Vector3 tempPoint)
+    {
+        isRotating = true;
+        tempPoint = tempPoint - this.transform.position; // To find the differences between touch position and current ship position
+        tempPoint.z = transform.position.z; //assigning the touch point of z to the ship position of z
+        Quaternion startrotation = this.transform.rotation; //took the valus of the ship rotation
+        Quaternion endrotation = Quaternion.LookRotation(tempPoint, Vector3.up); //
+        for(float i = 0; i < 1f; i = i+ Time.deltaTime)
+        {
+            transform.rotation = Quaternion.Slerp(startrotation, endrotation, i);
+            yield return (null);
+        }
+      
+
+        transform.rotation = endrotation;
+        Shoot();
+
+        isRotating=false;
+        
+
     }
     #endregion
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8451203063104666}
   - component: {fileID: 8451203063104667}
   - component: {fileID: 8451203063104664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidLTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8451204103389078}
   - component: {fileID: 8451204103389079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LargeTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

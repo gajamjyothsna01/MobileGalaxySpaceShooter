@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstantScripts 
+public class Constants
 {
     #region PUBLIC VARIABLES
     public const string BULLET_PREFAB_NAME = "Bullet";
@@ -11,5 +11,6 @@ public class ConstantScripts
     public const int ASTEROID_LAYER_NUMBER = 8;
     public const int BULLET_LAYER_NUMBER = 7;
     public const int UI_LAYER_NUMBER = 5;
+    public const int SHIP_LAYER = 6;
     #endregion
 }

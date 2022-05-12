@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8991650974952793053}
   - component: {fileID: 8991650974952793052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmallSix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8991650976060070097}
   - component: {fileID: 8991650976060070096}
   - component: {fileID: 8991650976060070099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidSSix
   m_TagString: Untagged
   m_Icon: {fileID: 0}

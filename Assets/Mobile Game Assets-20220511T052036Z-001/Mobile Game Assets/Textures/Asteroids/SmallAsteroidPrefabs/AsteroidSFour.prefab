@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1770543194274674114}
   - component: {fileID: 1770543194274674115}
   - component: {fileID: 1770543194274674112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidSFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770543195382075086}
   - component: {fileID: 1770543195382075087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmallFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}

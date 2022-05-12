@@ -53,6 +53,7 @@ namespace MyMobileGalaxyShooter
                     }
                 }
                 
+                
                 else  // if finger is removed from screen, then we are calling if tapgesture is not failed.
                 {
                     if(!tapGestureFailed)
