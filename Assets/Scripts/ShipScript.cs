@@ -31,6 +31,7 @@ public class ShipScript : MonoBehaviour
     private void OnEnable() //when the gameobject is active, then we are subscribing to the event
     {
         MyMobileGalaxyShooter.UserInputHandlerScript.OnTouchAction += TowardsTouch;
+        Debug.Log("Enable Function");
     }
     private void OnDisable() //when the gameobject is inactive, then we are desubscribing the event.
     {
@@ -83,7 +84,7 @@ public class ShipScript : MonoBehaviour
         tempPoint = tempPoint - this.transform.position; // To find the differences between touch position and current ship position
         tempPoint.z = transform.position.z; //assigning the touch point of z to the ship position of z
         Quaternion startrotation = this.transform.rotation; //took the valus of the ship rotation
-        Quaternion endrotation = Quaternion.LookRotation(tempPoint, Vector3.up); //
+        Quaternion endrotation = Quaternion.LookRotation(tempPoint, Vector3.forward); //
         for(float i = 0; i < 1f; i = i+ Time.deltaTime)
         {
             transform.rotation = Quaternion.Slerp(startrotation, endrotation, i);

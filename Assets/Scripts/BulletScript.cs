@@ -26,12 +26,12 @@ public class BulletScript : MonoBehaviour
 		transform.position = newPosition;
 
 		
-
+		
 		Vector3 viewportPosition = mainCamera.WorldToViewportPoint(transform.position);
 
 		if (viewportPosition.x > 1 || viewportPosition.x < 0 || viewportPosition.y > 1 || viewportPosition.y < 0)
 		{
-			//PoolManager.Instance.Recycle(Constants.BULLET_PREFAB_NAME, gameObject);
+			PoolManager.Instance.Recycle(Constants.BULLET_PREFAB_NAME, gameObject);
 		}
 	}
 	#endregion
@@ -42,6 +42,7 @@ public class BulletScript : MonoBehaviour
 	{
 		transform.position = position;
 	}
+	
 
 	// Set the tragectory of the bullet.
 	public void SetTrajectory(Vector3 target)

@@ -23,7 +23,7 @@ public class ObjectPool : MonoBehaviour
 
 		for (int i = 0; i < initialCapacity; i++)
 		{
-			GameObject obj = GameObject.Instantiate(prefab) as GameObject;
+			GameObject obj = Instantiate(prefab);
 			obj.transform.parent = parent;
 			obj.SetActive(false);
 			pool.Enqueue(obj);
