@@ -10,6 +10,7 @@ public class ShipScript : MonoBehaviour
     public float rotationSpeed = 10f; // Rotation speed to rotate a ship in degrees for secoond
     public float movementSpeed = 1f; //The movement of ship by Force applied in units for second.
     public Transform launcher;
+    public AudioSource audioSource;
     #endregion
 
     #region PRIVATE VARIABLES
@@ -94,6 +95,7 @@ public class ShipScript : MonoBehaviour
 
         transform.rotation = endrotation;
         Shoot();
+        audioSource.Play();
 
         isRotating=false;
         
